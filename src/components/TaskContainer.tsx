@@ -11,7 +11,8 @@ interface Props {
   btnTextCOE: string;
   btnText: string;
 }
-const POSTGRES_URL: string | undefined = process.env.POSTGRES_URL;
+const POSTGRES_URL: string =
+  "https://nestjs-course-nsammsonz-gustavosds-projects-5bb3ef2b.vercel.app/";
 
 export const TaskContainer = (props: Props) => {
   const [visible, setVisible] = useState(false);
