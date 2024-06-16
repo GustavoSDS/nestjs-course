@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    "prisma.prisma",
+    "esbenp.prettier-vscode",
+    "dsznajder.es7-react-js-snippets",
+    "RapidAPI.vscode-rapidapi-client",
+    "bradlc.vscode-tailwindcss",
+    "alexcvzz.vscode-sqlite",
+    "qwtel.sqlite-viewer",
+    "mtxr.sqltools-driver-sqlite"
+  ]
+}
