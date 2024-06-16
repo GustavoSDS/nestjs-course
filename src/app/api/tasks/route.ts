@@ -1,6 +1,13 @@
 import { prisma } from "@/libs/prisma";
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
+// Endpoints
+// ========================================================
+/**
+ * Basic GET Request to simuluate LIST in LCRUD
+ * @param request
+ * @returns
+ */
 export async function GET() {
   const tasks = await prisma.tasks.findMany();
 
@@ -10,7 +17,11 @@ export async function GET() {
   });
 }
 
-export async function POST(request: Request) {
+/**
+ * Basic POST Request to simuluate CREATE in LCRUD
+ * @param request
+ */
+export async function POST(request: NextRequest) {
   const data = await request.json();
 
   if (!data) {

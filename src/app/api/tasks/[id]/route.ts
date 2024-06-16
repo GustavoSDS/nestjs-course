@@ -1,8 +1,8 @@
 import { getTask, prisma } from "@/libs/prisma";
 import { Params } from "@/types";
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
-export async function GET(_request: Request, { params }: Params) {
+export async function GET(_request: NextRequest, { params }: Params) {
   const task = await getTask(params.id);
 
   if (task) {
@@ -27,7 +27,7 @@ export async function GET(_request: Request, { params }: Params) {
   });
 }
 
-export async function PUT(request: Request, { params }: Params) {
+export async function PUT(request: NextRequest, { params }: Params) {
   const body = await request.json();
   const isTask = await getTask(params.id);
 
@@ -55,7 +55,7 @@ export async function PUT(request: Request, { params }: Params) {
   });
 }
 
-export async function DELETE(_request: Request, { params }: Params) {
+export async function DELETE(_request: NextRequest, { params }: Params) {
   const isTask = await getTask(params.id);
 
   if (isTask) {
