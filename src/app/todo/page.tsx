@@ -1,12 +1,8 @@
 import TaskCard from "@/components/TaskCard";
-import { prisma } from "@/libs/prisma";
+import { loadTasks } from "@/libs/data";
 import { ITasks } from "@/types";
-import { Suspense, useEffect, useRef } from "react";
 
-async function loadTasks(): Promise<ITasks> {
-  const response = prisma.tasks.findMany();
-  return response;
-}
+export const dynamic = "force-dynamic";
 
 const Todo = async () => {
   const tasks: ITasks = await loadTasks();

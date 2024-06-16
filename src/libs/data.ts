@@ -1,4 +1,5 @@
-import { Post } from "@/types";
+import { ITasks, Post } from "@/types";
+import { prisma } from "./prisma";
 
 export async function loadPosts(limit: number): Promise<Post[]> {
   const response = await fetch(
@@ -21,3 +22,8 @@ export const loadPost = async (post: number) => {
   const data = await response.json();
   return data;
 };
+
+export async function loadTasks(): Promise<ITasks> {
+  const response = prisma.tasks.findMany();
+  return response;
+}
