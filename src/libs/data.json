@@ -1,0 +1,32 @@
+{
+  "navigation": [
+    {
+      "href": "/",
+      "title": "🏠Inicio"
+    },
+    {
+      "href": "/shop",
+      "title": "🛒Tienda"
+    },
+    {
+      "href": "/users",
+      "title": "👨‍💻Usuarios"
+    },
+    {
+      "href": "/posts",
+      "title": "📃Publicaciones"
+    },
+    {
+      "href": "/about",
+      "title": "💻Sobre mi"
+    },
+    {
+      "href": "/contact",
+      "title": "📧Contacto"
+    },
+    {
+      "href": "/todo",
+      "title": "📝TODO"
+    }
+  ]
+}
