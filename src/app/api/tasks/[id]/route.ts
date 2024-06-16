@@ -10,6 +10,11 @@ export async function GET(_request: NextRequest, { params }: Params) {
       return NextResponse.json({
         task,
         status: 200,
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+          "Access-Control-Allow-Headers": "Content-Type, Authorization",
+        },
         message: "Task found",
       });
     }
@@ -43,6 +48,11 @@ export async function PUT(request: NextRequest, { params }: Params) {
       return NextResponse.json({
         task,
         status: 200,
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+          "Access-Control-Allow-Headers": "Content-Type, Authorization",
+        },
         message: "Task updated",
       });
     }
@@ -69,6 +79,11 @@ export async function DELETE(_request: NextRequest, { params }: Params) {
       return NextResponse.json({
         tasks: task,
         status: 200,
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+          "Access-Control-Allow-Headers": "Content-Type, Authorization",
+        },
         message: "Task deleted",
       });
     }
