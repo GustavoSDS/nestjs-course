@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/NavBar";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -50,6 +51,7 @@ export default function RootLayout({
           " antialiased min-h-screen flex flex-1 flex-col justify-between md:gap-y-2"
         }
       >
+        <SpeedInsights />
         <header
           role="banner"
           className="flex justify-start items-center gap-x-5 ml-3 mt-1 md:ml-5 md:mt-2"
