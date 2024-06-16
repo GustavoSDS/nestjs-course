@@ -12,7 +12,7 @@ interface Props {
   btnText: string;
 }
 const POSTGRES_URL: string =
-  "https://nestjs-course-nsammsonz-gustavosds-projects-5bb3ef2b.vercel.app/";
+  "https://nestjs-course-nsammsonz-gustavosds-projects-5bb3ef2b.vercel.app";
 
 export const TaskContainer = (props: Props) => {
   const [visible, setVisible] = useState(false);
@@ -52,7 +52,7 @@ export const TaskContainer = (props: Props) => {
           completed: data.completed === "true" ? true : false,
         });
       } else {
-        await axios.post(`${POSTGRES_URL}/api/tasks`, {
+        await axios.post(`${POSTGRES_URL}/api/tasks/`, {
           ...data,
           completed: data.completed === "true" ? true : false,
         });
