@@ -1,7 +1,8 @@
 import UsersComponent from "@/components/Users";
 
-// const API_URL_USERS_JSONPLACEHOLDER = process.env.API_URL_USERS_JSONPLACEHOLDER;
-const API_URL_USERS_REQRES = process.env.API_URL_USERS_REQRES;
+const API_URL_USERS_JSONPLACEHOLDER =
+  "https://jsonplaceholder.typicode.com/users/";
+const API_URL_USERS_REQRES = "https://reqres.in/api/users/";
 
 async function fetchUsers() {
   const response = await fetch(`${API_URL_USERS_REQRES}`);
