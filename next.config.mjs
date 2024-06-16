@@ -6,7 +6,7 @@ const nextConfig = {
     return [
       {
         source: "/api/:path*",
-        destination: `https://nestjs-course-beta.vercel.app/:path*`,
+        destination: `https://nestjs-course:path*`,
       },
     ];
   },
