@@ -11,8 +11,7 @@ interface Props {
   btnTextCOE: string;
   btnText: string;
 }
-const POSTGRES_URL: string =
-  "https://nestjs-course-nsammsonz-gustavosds-projects-5bb3ef2b.vercel.app";
+const WEB_URL: string = "https://https://nestjs-course-beta.vercel.app/";
 
 export const TaskContainer = (props: Props) => {
   const [visible, setVisible] = useState(false);
@@ -22,7 +21,7 @@ export const TaskContainer = (props: Props) => {
 
   useEffect(() => {
     if (props.id) {
-      axios.get(`${POSTGRES_URL}/api/tasks/${props.id}`).then(({ data }) => {
+      axios.get(`${WEB_URL}/api/tasks/${props.id}`).then(({ data }) => {
         const { task } = data;
         const { title, description, completed } = task;
         setValue("title", title);
@@ -47,12 +46,12 @@ export const TaskContainer = (props: Props) => {
   const onSubmit = handleSubmit(async (data) => {
     if (data.title !== "" && data.description !== "") {
       if (props.id) {
-        await axios.put(`${POSTGRES_URL}/api/tasks/${props.id}`, {
+        await axios.put(`${WEB_URL}/api/tasks/${props.id}`, {
           ...data,
           completed: data.completed === "true" ? true : false,
         });
       } else {
-        await axios.post(`${POSTGRES_URL}/api/tasks/`, {
+        await axios.post(`${WEB_URL}/api/tasks/`, {
           ...data,
           completed: data.completed === "true" ? true : false,
         });
