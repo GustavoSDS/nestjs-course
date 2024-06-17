@@ -40,11 +40,6 @@ export async function POST(request: NextRequest) {
   if (task) {
     return NextResponse.json({
       task: task,
-      headers: {
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
-        "Access-Control-Allow-Headers": "Content-Type, Authorization",
-      },
       status: 200,
     });
   }
