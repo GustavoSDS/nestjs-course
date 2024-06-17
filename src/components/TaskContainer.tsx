@@ -11,7 +11,7 @@ interface Props {
   btnTextCOE: string;
   btnText: string;
 }
-const WEB_URL: string = "https://https://nestjs-course-beta.vercel.app";
+const WEB_URL: string = "https://nestjs-course-beta.vercel.app";
 
 export const TaskContainer = (props: Props) => {
   const [visible, setVisible] = useState(false);
